@@ -348,6 +348,27 @@
     box-shadow:0 24px 50px rgba(0,0,0,.5); }
   .spec-card .row { border-bottom-color:rgba(236,234,227,.12); }
   .spec-card .row span:last-child { color:var(--brass); }
+
+  /* ———— HERO V3: full-bleed ———— */
+  .hero--bleed { position:relative; min-height:clamp(620px, 94vh, 880px); overflow:hidden;
+    display:flex; flex-direction:column; padding-top:0; }
+  .hero--bleed .hero__bg { position:absolute; inset:0; width:100%; height:114%;
+    object-fit:cover; object-position:50% 40%; will-change:transform;
+    filter:grayscale(1) sepia(.4) saturate(1.25) contrast(1.1) brightness(.75); }
+  .hero--bleed .veil { position:absolute; inset:0; background:
+    linear-gradient(to right, rgba(11,12,14,.85), rgba(11,12,14,.38) 55%, rgba(11,12,14,.18)),
+    linear-gradient(to top, rgba(11,12,14,.92), transparent 48%); }
+  .hero--bleed .wrap { position:relative; flex:1; width:100%; max-width:1320px;
+    display:flex; flex-direction:column; justify-content:center;
+    padding-top:70px; padding-bottom:56px; }
+  .hero--bleed .copy { display:block; padding-bottom:0; max-width:900px; }
+  .hero--bleed h1 { font-size:clamp(44px, 6.6vw, 96px); }
+  .hero--bleed .lede { max-width:46ch; }
+  .hero--bleed .stats { position:relative; margin-top:0; border-bottom:0;
+    border-top:1px solid rgba(236,234,227,.18);
+    background:rgba(11,12,14,.55); backdrop-filter:blur(10px); }
+  .hero--bleed .stats .cell { padding-top:18px; padding-bottom:20px; border-color:rgba(236,234,227,.14); }
+  .hero--bleed .stats b { font-size:clamp(26px, 2.4vw, 34px); }
 </style>
 </head>
 <body>
@@ -373,31 +394,20 @@
 </div></header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero hero--bleed">
+  <img class="hero__bg" id="heroimg" src="assets/stock/machine-1.jpg" alt="Circular knitting machine floor, bronze monochrome" fetchpriority="high">
+  <div class="veil" aria-hidden="true"></div>
   <div class="wrap">
     <div class="copy">
       <hr class="stitch" aria-hidden="true">
       <span class="label rv">Knits &amp; home textiles — made in-house since 1992</span>
-      <h1 class="rv" style="--i:1">Knitted<span class="dot">.</span> Dyed<span class="dot">.</span><br>Stitched<span class="dot">.</span> <span class="ghostline">Shipped<span class="dot">.</span></span></h1>
-      <p class="lede rv" style="--i:2">Four verbs, one roof. <b>Knitted fabric and garments</b> for export apparel brands; <b>towels, robes and bedding</b> for hospitality buyers — all made by one team in Karachi.</p>
+      <h1 class="rv" style="--i:1">Yarn to garment<span class="dot">.</span><br><span class="ghostline">One roof in Karachi<span class="dot">.</span></span></h1>
+      <p class="lede rv" style="--i:2"><b>Knitted fabric and garments</b> for export apparel brands; <b>towels, robes and bedding</b> for hospitality buyers — knitted, dyed, cut, stitched and embroidered by one team.</p>
       <div class="ctas rv" style="--i:3">
         <a class="btn" href="#capabilities">Explore capabilities</a>
         <a class="btn btn--ghost" href="#enquiry">Request a quote&nbsp;&nbsp;→</a>
       </div>
       <span class="sample-note rv" style="--i:4">Sample imagery — replaced at factory shoot</span>
-    </div>
-    <div class="plate rv" style="--i:2">
-      <figure><img id="heroimg" src="assets/stock/machine-1.jpg" alt="Circular knitting machine head, bronze monochrome" fetchpriority="high" style="object-position:50% 42%"></figure>
-      <div class="spec-card">
-        <div class="row"><span>Construction</span><span>Pique</span></div>
-        <div class="row"><span>Weight</span><span>200–240 GSM*</span></div>
-        <div class="row"><span>Knit dia.</span><span>18–40″</span></div>
-        <div class="row"><span>Dye lot</span><span>In-house</span></div>
-      </div>
-      <div class="caption">
-        <span class="mono">Plate 01 — Circular knitting floor</span>
-        <span class="mono">*TBC</span>
-      </div>
     </div>
   </div>
   <div class="stats">
