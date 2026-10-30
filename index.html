@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tooba International — Design Options</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M10 14 H54" stroke="%23C8A165" stroke-width="10" fill="none"/><path d="M32 14 V40 C32 52 22 55 17 49 C14 45 18 40 23 42" stroke="%23C8A165" stroke-width="10" stroke-linecap="round" fill="none"/></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0B0C0E; --fg:#ECEAE3; --brass:#C8A165; --indigo:#AFC0F0;
+    --line:rgba(236,234,227,.14); --disp:"Space Grotesk",sans-serif; --mono:"IBM Plex Mono",monospace; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--fg); font-family:var(--disp);
+    min-height:100svh; display:grid; place-items:center; padding:24px 16px; }
+  main { width:100%; max-width:860px; }
+  .mark { display:flex; align-items:center; gap:14px; justify-content:center; margin-bottom:14px; }
+  .mark b { font:700 22px/1 var(--disp); letter-spacing:.24em; text-transform:uppercase; }
+  .sub { text-align:center; font:500 10px var(--mono); letter-spacing:.3em; text-transform:uppercase;
+    color:rgba(236,234,227,.45); margin-bottom:54px; }
+  h1 { text-align:center; font:500 clamp(26px,4.5vw,40px)/1.15 var(--disp); letter-spacing:-.02em; margin-bottom:38px; }
+  .opts { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:640px){ .opts { grid-template-columns:1fr; } }
+  a.opt { display:block; border:1px solid var(--line); padding:30px 28px 26px; text-decoration:none;
+    color:var(--fg); transition:transform .25s, border-color .25s, background-color .25s; }
+  a.opt:hover { transform:translateY(-4px); }
+  .opt .tagline { font:500 10px var(--mono); letter-spacing:.2em; text-transform:uppercase; margin-bottom:16px; }
+  .opt h2 { font:500 26px/1.2 var(--disp); letter-spacing:-.01em; margin-bottom:8px; }
+  .opt p { font:400 13.5px/1.6 var(--mono); color:rgba(236,234,227,.55); margin-bottom:22px; }
+  .opt .go { font:500 14px var(--disp); }
+  .opt--dark { background:#121316; }
+  .opt--dark .tagline, .opt--dark .go { color:var(--brass); }
+  .opt--dark:hover { border-color:var(--brass); }
+  .opt--light { background:#F5F2EB; color:#1D1C1A; }
+  .opt--light p { color:rgba(29,28,26,.55); }
+  .opt--light .tagline, .opt--light .go { color:#2A3570; }
+  .opt--light:hover { border-color:#2A3570; }
+  .foot { text-align:center; margin-top:46px; font:400 9.5px var(--mono); letter-spacing:.18em;
+    text-transform:uppercase; color:rgba(236,234,227,.35); }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark">
+    <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="10" y1="10" x2="54" y2="55"><stop offset="0" stop-color="#D9B77A"/><stop offset="1" stop-color="#AE8647"/></linearGradient></defs><path d="M10 14 H54" stroke="url(#g)" stroke-width="9" fill="none"/><path d="M32 14 V40 C32 52 22 55 17 49 C14 45 18 40 23 42" stroke="url(#g)" stroke-width="9" stroke-linecap="round" fill="none"/></svg>
+    <b>Tooba</b>
+  </div>
+  <div class="sub">International · Karachi · Since 1992</div>
+  <h1>New website — two design directions</h1>
+  <div class="opts">
+    <a class="opt opt--dark" href="dark.html">
+      <div class="tagline">Option 01</div>
+      <h2>Dark · Brass</h2>
+      <p>Industrial, premium, bronze photography on charcoal.</p>
+      <div class="go">View option 01 →</div>
+    </a>
+    <a class="opt opt--light" href="light.html">
+      <div class="tagline">Option 02</div>
+      <h2>Light · Indigo</h2>
+      <p>Bright, editorial, indigo accents on warm paper.</p>
+      <div class="go">View option 02 →</div>
+    </a>
+  </div>
+  <div class="foot">Design proposals — sample imagery, specs await factory confirmation</div>
+</main>
+</body>
+</html>
