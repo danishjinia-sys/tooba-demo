@@ -321,6 +321,33 @@
   .cap-panel:hover .arr { color: rgba(11,12,14,.8); }
   .cap-panel:hover .ghostnum { color: rgba(11,12,14,.15); }
   .cert--visit .mono { color: rgba(11,12,14,.65); }
+
+  /* ———— HERO V2 (dark) ———— */
+  .hero::before { content:""; position:absolute; inset:0; pointer-events:none;
+    background: radial-gradient(900px 520px at 18% 32%, rgba(200,161,101,.09), transparent 70%); }
+  .stitch { width:72px; height:2px; border:0; margin:0 0 20px;
+    background: repeating-linear-gradient(to right, var(--brass) 0 8px, transparent 8px 15px); }
+  .hero h1 { line-height:.99; }
+  .hero h1 .dot { color:var(--brass); -webkit-text-stroke:0; }
+  .hero h1 .ghostline { -webkit-text-stroke:1.5px rgba(214,178,118,.95); }
+  .plate figure { height:clamp(440px,50vw,700px); background:#0E0C09; }
+  .plate figure img { filter:grayscale(1) sepia(.45) saturate(1.3) contrast(1.12) brightness(.62); }
+  .plate figure::after { content:""; position:absolute; inset:0;
+    background: linear-gradient(to right, rgba(18,19,22,.55), transparent 42%),
+                linear-gradient(to top, rgba(18,19,22,.68), transparent 46%); }
+  .plate figure { position:relative; }
+  .plate figure::before { content:""; position:absolute; inset:14px; z-index:2; pointer-events:none;
+    background:
+      linear-gradient(var(--brass),var(--brass)) top left/26px 1.5px,
+      linear-gradient(var(--brass),var(--brass)) top left/1.5px 26px,
+      linear-gradient(var(--brass),var(--brass)) bottom right/26px 1.5px,
+      linear-gradient(var(--brass),var(--brass)) bottom right/1.5px 26px;
+    background-repeat:no-repeat; }
+  .spec-card { z-index:3; background:rgba(11,12,14,.82); backdrop-filter:blur(10px);
+    border:1px solid rgba(200,161,101,.35); border-top:2px solid var(--brass);
+    box-shadow:0 24px 50px rgba(0,0,0,.5); }
+  .spec-card .row { border-bottom-color:rgba(236,234,227,.12); }
+  .spec-card .row span:last-child { color:var(--brass); }
 </style>
 </head>
 <body>
@@ -349,8 +376,9 @@
 <section class="hero">
   <div class="wrap">
     <div class="copy">
+      <hr class="stitch" aria-hidden="true">
       <span class="label rv">Knits &amp; home textiles — made in-house since 1992</span>
-      <h1 class="rv" style="--i:1">Knitted. Dyed.<br>Stitched. <span class="ghostline">Shipped.</span></h1>
+      <h1 class="rv" style="--i:1">Knitted<span class="dot">.</span> Dyed<span class="dot">.</span><br>Stitched<span class="dot">.</span> <span class="ghostline">Shipped<span class="dot">.</span></span></h1>
       <p class="lede rv" style="--i:2">Four verbs, one roof. <b>Knitted fabric and garments</b> for export apparel brands; <b>towels, robes and bedding</b> for hospitality buyers — all made by one team in Karachi.</p>
       <div class="ctas rv" style="--i:3">
         <a class="btn" href="#capabilities">Explore capabilities</a>
@@ -359,7 +387,7 @@
       <span class="sample-note rv" style="--i:4">Sample imagery — replaced at factory shoot</span>
     </div>
     <div class="plate rv" style="--i:2">
-      <figure><img id="heroimg" src="assets/stock/machine-1.jpg" alt="Circular knitting machine head, indigo duotone" fetchpriority="high"></figure>
+      <figure><img id="heroimg" src="assets/toobatex-original/whatsapp-image-2023-10-12-at-4.38.51-pm-900x1600-1-1.jpg" alt="Hand holding a stack of dyed fabric, bronze monochrome" fetchpriority="high" style="object-position:50% 30%"></figure>
       <div class="spec-card">
         <div class="row"><span>Construction</span><span>Pique</span></div>
         <div class="row"><span>Weight</span><span>200–240 GSM*</span></div>
@@ -367,7 +395,7 @@
         <div class="row"><span>Dye lot</span><span>In-house</span></div>
       </div>
       <div class="caption">
-        <span class="mono">Plate 01 — Circular knitting floor</span>
+        <span class="mono">Plate 01 — Fabric stack, in-house dye lots</span>
         <span class="mono">*TBC</span>
       </div>
     </div>
